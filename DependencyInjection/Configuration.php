@@ -173,6 +173,8 @@ class Configuration implements ConfigurationInterface
     {
         $node
             ->children()
+                ->scalarNode('shard_role')->end()
+                ->scalarNode('shard_id')->end()
                 ->scalarNode('dbname')->end()
                 ->scalarNode('host')->defaultValue('localhost')->end()
                 ->scalarNode('port')->defaultNull()->end()
